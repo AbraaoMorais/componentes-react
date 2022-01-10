@@ -1,6 +1,40 @@
 # WHAT DOES IT DO? 
 > This hook capture the dimensions of device, is util for SSR applications nextjs or react
+---
+## THE CODE
+~~~javascript
+import { useState, useEffect } from 'react';
 
+export default function useWindowDimensions() {
+
+  const hasWindow = typeof window !== 'undefined';
+
+  function getWindowDimensions() {
+    const width = hasWindow ? window.innerWidth : null;
+    const height = hasWindow ? window.innerHeight : null;
+    return {
+      width,
+      height,
+    };
+  }
+
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  useEffect(() => {
+    if (hasWindow) {
+      function handleResize() {
+        setWindowDimensions(getWindowDimensions());
+      }
+
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, [hasWindow]);
+
+  return windowDimensions;
+}
+~~~
+---
 ## HOW TO USE IN YOUR COMPONENT
 ~~~javascript
 import useWindowDimensions from './hooks/useWindowDimensions';
