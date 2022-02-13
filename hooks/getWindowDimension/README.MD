@@ -1,5 +1,7 @@
 # WHAT DOES IT DO? 
 > This hook capture the dimensions of device, is util for SSR applications nextjs or react
+##CAUTION:
+>but it doesn't work with getServerSideRendering and getStaticProps
 ---
 ## THE CODE
 ~~~javascript
