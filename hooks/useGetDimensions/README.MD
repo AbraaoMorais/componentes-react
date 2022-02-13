@@ -5,6 +5,7 @@ Uses a [`Window: resize event`](https://developer.mozilla.org/en-US/docs/Web/API
 
 ## Warning
 > this hook works with getServersideRendering and getStaticProps of Nextjs 
+>original repository: https://github.com/ilhantekir/React-hooks-get-dimensions
 
 ## Install
 
