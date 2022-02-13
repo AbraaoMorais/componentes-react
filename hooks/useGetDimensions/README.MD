@@ -3,6 +3,8 @@
 React-hooks-get-dimensions is a helpful to get a react component's or window dimensions.
 Uses a [`Window: resize event`](https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event) to detect when an element's dimensions have changed.
 
+## ATEMPT
+> this hook works with getServersideRendering and getStaticProps of Nextjs 
 
 ## Install
 
